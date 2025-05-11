@@ -1,30 +1,34 @@
-# Pixelated Background (Animated)
 
-*Automatically synced with your [v0.dev](https://v0.dev) deployments*
+🔐 EncryptX
+EncryptX is a web-based tool that allows users to input text or upload files and benchmark multiple encryption algorithms to determine the most efficient and suitable one based on performance metrics like encryption/decryption speed, size, and security levels.
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/shyam-g9s-projects/v0-encrypt-x-7j)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.dev-black?style=for-the-badge)](https://v0.dev/chat/projects/mmzfg48edOw)
+🚀 Features
+✅ Text & File Input Support – Encrypt any plain text or upload files directly.
 
-## Overview
+🧪 Benchmark Multiple Algorithms – Compare popular encryption algorithms such as AES, DES, RSA, Blowfish, and more.
 
-This repository will stay in sync with your deployed chats on [v0.dev](https://v0.dev).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.dev](https://v0.dev).
+📊 Real-time Performance Metrics – Measure encryption/decryption time, output size, and processing efficiency.
 
-## Deployment
+🧠 Future AI Integration – Coming soon: AI-powered recommendations based on data type, size, and usage context.
 
-Your project is live at:
+🌐 User-Friendly Interface – Responsive and intuitive UI for smooth user experience.
 
-**[https://vercel.com/shyam-g9s-projects/v0-encrypt-x-7j](https://vercel.com/shyam-g9s-projects/v0-encrypt-x-7j)**
+📂 How It Works
+Choose Input Type: Enter text manually or upload a file.
 
-## Build your app
+Select Algorithms: Pick one or more algorithms to benchmark.
 
-Continue building your app on:
+Run Benchmark: Let EncryptX process and show encryption & decryption stats.
 
-**[https://v0.dev/chat/projects/mmzfg48edOw](https://v0.dev/chat/projects/mmzfg48edOw)**
+Review Results: Analyze timing, efficiency, and best-suited algorithm.
 
-## How It Works
 
-1. Create and modify your project using [v0.dev](https://v0.dev)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+🧪 Example Use Cases
+🔐 Evaluating which algorithm to use for large media files
+
+📝 Encrypting confidential text documents securely
+
+🧾 Comparing algorithm performance for compliance or audit
+
+🧑‍💻 Educating students on cryptography principles
+
