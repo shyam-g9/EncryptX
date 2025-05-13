@@ -126,8 +126,8 @@ export default function DecryptPage() {
               </CardHeader>
               <CardContent>
                 <div className="space-y-4">
-                  <div className="p-4 bg-gray-50 rounded-md overflow-x-auto">
-                    <pre className="text-sm whitespace-pre-wrap">{decryptedResult}</pre>
+                  <div className="p-4 bg-white rounded-md overflow-x-auto">
+                    <pre className="text-sm text-black whitespace-pre-wrap">{decryptedResult}</pre>
                   </div>
                 </div>
               </CardContent>

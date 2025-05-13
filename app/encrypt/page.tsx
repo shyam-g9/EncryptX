@@ -29,20 +29,27 @@ export default function EncryptPage() {
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files[0]) {
-      setFile(e.target.files[0])
+      const selectedFile = e.target.files[0]
+      setFile(selectedFile)
+
+      // Read the file content
+      const reader = new FileReader()
+      reader.onload = (event) => {
+        if (event.target?.result) {
+          setInputText(event.target.result as string)
+        }
+      }
+
+      // Read as text
+      reader.readAsText(selectedFile)
     }
   }
 
   const handleEncrypt = async () => {
     setIsLoading(true)
     try {
-      // Get the input data
-      let inputData = inputText
-      if (inputType === "file" && file) {
-        // In a real app, we would read the file here
-        // For demo purposes, we'll use the file name as input
-        inputData = file.name
-      }
+      // Get the input data - always use the inputText which now contains file content if a file was selected
+      const inputData = inputText
 
       // Encrypt the data
       const result = await encryptData(algorithm, inputData)
@@ -205,8 +212,8 @@ export default function EncryptPage() {
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-4">
-                    <div className="p-4 bg-black/30 rounded-md overflow-x-auto">
-                      <pre className="text-sm text-emerald-100 font-mono">{encryptedResult}</pre>
+                    <div className="p-4 bg-white rounded-md overflow-x-auto">
+                      <pre className="text-sm text-black font-mono">{encryptedResult}</pre>
                     </div>
                   </div>
                 </CardContent>

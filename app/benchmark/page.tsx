@@ -35,9 +35,22 @@ export default function BenchmarkPage() {
   const [isLoading, setIsLoading] = useState(false)
   const [results, setResults] = useState<any>(null)
 
+  // Update the handleFileChange function to read file content
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files[0]) {
-      setFile(e.target.files[0])
+      const selectedFile = e.target.files[0]
+      setFile(selectedFile)
+
+      // Read the file content
+      const reader = new FileReader()
+      reader.onload = (event) => {
+        if (event.target?.result) {
+          setInputText(event.target.result as string)
+        }
+      }
+
+      // Read as text
+      reader.readAsText(selectedFile)
     }
   }
 
@@ -48,6 +61,7 @@ export default function BenchmarkPage() {
     }))
   }
 
+  // Update the handleRunBenchmark function to use the file content
   const handleRunBenchmark = async () => {
     setIsLoading(true)
     try {
@@ -56,13 +70,8 @@ export default function BenchmarkPage() {
         .filter(([_, isSelected]) => isSelected)
         .map(([name]) => name)
 
-      // Get the input data
-      let inputData = inputText
-      if (inputType === "file" && file) {
-        // In a real app, we would read the file here
-        // For demo purposes, we'll use the file name as input
-        inputData = file.name
-      }
+      // Get the input data - always use the inputText which now contains file content if a file was selected
+      const inputData = inputText
 
       // Run the benchmark
       const benchmarkResults = await runBenchmark(algorithms, inputData)
