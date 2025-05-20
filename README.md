@@ -14,7 +14,7 @@ EncryptX is a web-based tool that allows users to input text or upload files and
 🌐 User-Friendly Interface – Responsive and intuitive UI for smooth user experience.
 
 📂 How It Works
-Choose Input Type: Enter text manually or upload a file.
+Choose Input Type: Enter text manually or upload a file of any format like pdf,txt or img.
 
 Select Algorithms: Pick one or more algorithms to benchmark.
 
