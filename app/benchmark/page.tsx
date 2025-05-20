@@ -49,7 +49,7 @@ export default function BenchmarkPage() {
         }
       }
 
-      // Read as text
+  
       reader.readAsText(selectedFile)
     }
   }
